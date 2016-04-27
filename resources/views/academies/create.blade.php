@@ -6,7 +6,7 @@
         @if(Session::has('message'))
             <p>{{Session::get('message')}}</p>
         @endif
-        <form method="POST" enctype="multipart/form-data" action="/academies/">
+        <form method="POST" enctype="multipart/form-data" action="/academies">
             {!! csrf_field() !!}
             <div class="row" style="padding-top:50px;">
                 <div class="col-lg-6">
