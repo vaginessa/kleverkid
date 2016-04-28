@@ -9,11 +9,12 @@
             <p><span>Contact Email Id:</span> {{$academy->email}}</p>
             <p><span>Description:</span> {{$academy->description}}</p>
             <p><span>TimeSlots:</span> </p>
-            @foreach($academy->timeslots as $timeslot) @endforeach
+            @foreach($academy->timeslots as $timeslot)
             <p>@if($timeslot->day==1) Monday @elseif($timeslot->day==2) Tuesday @elseif($timeslot->day==3) Wednesday @elseif($timeslot->day==4) Thursday @elseif($timeslot->day==5) Friday @elseif($timeslot->day==6) Saturday @elseif($timeslot->day==7) Sunday @endif
                {{$timeslot->start_time}} to
                {{$timeslot->end_time}}
             </p>
+            @endforeach
         </div>
         <div class="col-lg-6">
             @foreach($academy->images as $image)
